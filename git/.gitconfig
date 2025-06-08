@@ -1,0 +1,7 @@
+[user]
+    name = "Khoa Tran" 
+    email = "ovn6002@gmail.com"
+[alias]
+	ac = "!git add . ; git commit -m"
+[init]
+	defaultBranch = main
