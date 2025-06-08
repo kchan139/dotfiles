@@ -95,6 +95,27 @@ else
     fi
 fi
 
+# --- WezTerm Configuration ---
+echo ""
+echo "--- Setting up WezTerm configuration ---"
+# Define the preferred WezTerm config directory
+WEZTERM_CONFIG_DIR="$HOME/.config/wezterm"
+mkdir -p "$WEZTERM_CONFIG_DIR"
+if [ $? -ne 0 ]; then
+    echo "  ERROR: Failed to create '$WEZTERM_CONFIG_DIR'. Skipping WezTerm setup."
+else
+    # Link the main wezterm.lua file
+    link_file "$SCRIPT_DIR/wezterm/wezterm.lua" "$WEZTERM_CONFIG_DIR/wezterm.lua" "WezTerm wezterm.lua"
+
+    # You might have other WezTerm config files (e.g., in a 'colors' sub-directory)
+    # If so, you'd add more linking logic here:
+    # Example: If you have a 'colors' directory in your dotfiles for WezTerm themes
+    # if [ -d "$SCRIPT_DIR/wezterm/colors" ]; then
+    #     echo "  Linking WezTerm colors directory..."
+    #     link_file "$SCRIPT_DIR/wezterm/colors" "$WEZTERM_CONFIG_DIR/colors" "WezTerm colors directory"
+    # fi
+fi
+
 echo ""
 echo "Dotfiles setup complete!"
 echo "Please remember to source your .bashrc (e.g., 'source ~/.bashrc' or restart your terminal) for changes to take effect."
