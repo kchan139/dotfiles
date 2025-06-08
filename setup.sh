@@ -99,6 +99,8 @@ if [ $? -ne 0 ]; then
     echo "  ERROR: Failed to create '$WEZTERM_CONFIG_DIR'. Skipping WezTerm setup."
 else
     link_file "$SCRIPT_DIR/wezterm/wezterm.lua" "$WEZTERM_CONFIG_DIR/wezterm.lua" "WezTerm wezterm.lua"
+    link_file "$SCRIPT_DIR/wezterm/events.lua" "$WEZTERM_CONFIG_DIR/events.lua" "WezTerm events.lua"
+    link_file "$SCRIPT_DIR/wezterm/config.lua" "$WEZTERM_CONFIG_DIR/config.lua" "WezTerm config.lua"
 
 fi
 

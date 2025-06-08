@@ -1,1 +1,6 @@
 theme = "noctis"
+
+[editor]
+cursor-shape.normal = "block"
+cursor-shape.insert = "bar"
+cursor-shape.select = "hidden"
