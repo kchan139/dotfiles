@@ -5,6 +5,16 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.keys = {
+  {
+    key = '`',
+    mods = 'CTRL',
+    action = wezterm.action.SplitHorizontal
+      {
+        domain = 'CurrentPaneDomain',
+      },
+  },
+}
 
 config.automatically_reload_config = true
 
@@ -33,7 +43,7 @@ config.text_background_opacity = 1.0
 config.background = {
   {
     source = {
-      File = os.getenv("HOME") .. "/dotfiles/img/dark-desert.jpg",
+      File = os.getenv("HOME") .. "/dotfiles/img/portal.png",
     },
     hsb = {
       hue = 1.0,
