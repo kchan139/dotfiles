@@ -4,3 +4,19 @@ theme = "noctis"
 cursor-shape.normal = "block"
 cursor-shape.insert = "bar"
 cursor-shape.select = "hidden"
+
+# Keybindings for insert mode
+[keys.insert]
+"C-h" = "move_char_left"
+"C-j" = "move_line_down"
+"C-k" = "move_line_up"
+"C-l" = "move_char_right"
+
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
