@@ -8,7 +8,7 @@ end
 config.automatically_reload_config = true
 
 config.font_size = 13.0
-config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'Outrun Dark (base16)'
 
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
