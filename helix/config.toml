@@ -7,10 +7,10 @@ cursor-shape.select = "hidden"
 
 # Keybindings for insert mode
 [keys.insert]
-"C-h" = "move_char_left"
-"C-j" = "move_line_down"
-"C-k" = "move_line_up"
-"C-l" = "move_char_right"
+"A-h" = "move_char_left"
+"A-j" = "move_line_down"
+"A-k" = "move_line_up"
+"A-l" = "move_char_right"
 
 up = "no_op"
 down = "no_op"
