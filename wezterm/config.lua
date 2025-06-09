@@ -5,17 +5,6 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
-config.keys = {
-  {
-    key = '`',
-    mods = 'CTRL',
-    action = wezterm.action.SplitHorizontal
-      {
-        domain = 'CurrentPaneDomain',
-      },
-  },
-}
-
 config.automatically_reload_config = true
 
 config.font_size = 13.0
@@ -82,6 +71,14 @@ config.keys = {
     key = 'l',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.ActivatePaneDirection 'Right',
+  },
+  {
+    key = '`',
+    mods = 'CTRL',
+    action = wezterm.action.SplitHorizontal
+      {
+        domain = 'CurrentPaneDomain',
+      },
   },
 }
 
