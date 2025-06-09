@@ -68,10 +68,23 @@ echo ""
 echo "--- Setting up Bash configuration ---"
 link_file "$SCRIPT_DIR/bash/.bashrc" "$HOME/.bashrc" ".bashrc"
 
+# --- Zsh Configuration ---
+echo ""
+echo "--- Setting up Zsh configuration ---"
+link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
+
+echo ""
+echo "Dotfiles setup complete!"
+
 # --- Git Configuration ---
 echo ""
 echo "--- Setting up Git configuration ---"
 link_file "$SCRIPT_DIR/git/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
+
+# --- Starship Configuration ---
+echo ""
+echo "--- Setting up Starship configuration ---"
+link_file "$SCRIPT_DIR/starship/starship.toml" "$HOME/.config/starship.toml" "starship.toml"
 
 # --- Helix Configuration ---
 echo ""
@@ -104,10 +117,3 @@ else
 
 fi
 
-# --- Zsh Configuration ---
-echo ""
-echo "--- Setting up Zsh configuration ---"
-link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
-
-echo ""
-echo "Dotfiles setup complete!"
