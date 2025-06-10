@@ -4,6 +4,7 @@ theme = "base16_transparent"
 cursor-shape.normal = "block"
 cursor-shape.insert = "bar"
 cursor-shape.select = "hidden"
+soft-wrap.enable = true
 
 # Keybindings for insert mode
 [keys.insert]
