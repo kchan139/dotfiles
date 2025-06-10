@@ -8,7 +8,10 @@ end
 config.automatically_reload_config = true
 
 config.font_size = 13.0
-config.color_scheme = 'Outrun Dark (base16)'
+-- config.color_scheme = 'cyberpunk'
+-- config.color_scheme = 'Dark Violet (base16)'
+-- config.color_scheme = 'VisiBlue (terminal.sexy)'
+config.color_scheme = 'SeaShells'
 
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
