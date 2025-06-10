@@ -7,7 +7,7 @@ end
 
 config.automatically_reload_config = true
 
-config.font_size = 13.0
+config.font_size = 14.0
 -- config.color_scheme = 'cyberpunk'
 -- config.color_scheme = 'Dark Violet (base16)'
 -- config.color_scheme = 'VisiBlue (terminal.sexy)'
@@ -21,7 +21,7 @@ config.hide_tab_bar_if_only_one_tab = false
 config.default_cursor_style = "SteadyBar"
 
 config.window_decorations = "NONE"
--- config.window_close_confirmation = "NeverPrompt"
+config.window_close_confirmation = "NeverPrompt"
 -- config.window_background_opacity = 0.95
 config.window_padding = {
   left = 3,
