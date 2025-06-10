@@ -3,3 +3,27 @@ name = "go"
 auto-format = true
 language-servers = ["gopls"]
 formatter = { command = "goimports" }
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["pylsp"]
+formatter = { command = "black", args = ["--quiet", "-"] }
+
+[[language]]
+name = "yaml"
+auto-format = true
+language-servers = ["yaml-language-server"]
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+[[language]]
+name = "c"
+auto-format = true
+language-servers = ["clangd"]
+formatter = { command = "clang-format", args = ["-style=Google"] }
+
+[[language]]
+name = "cpp"
+auto-format = true
+language-servers = ["clangd"]
+formatter = { command = "clang-format", args = ["-style=Google"] }
