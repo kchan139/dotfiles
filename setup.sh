@@ -73,9 +73,6 @@ echo ""
 echo "--- Setting up Zsh configuration ---"
 link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
 
-echo ""
-echo "Dotfiles setup complete!"
-
 # --- Git Configuration ---
 echo ""
 echo "--- Setting up Git configuration ---"
@@ -117,3 +114,6 @@ else
 
 fi
 
+
+echo ""
+echo "Dotfiles setup complete!"
