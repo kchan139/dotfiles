@@ -78,10 +78,10 @@ config.keys = {
   {
     key = '`',
     mods = 'CTRL',
-    action = wezterm.action.SplitHorizontal
-      {
-        domain = 'CurrentPaneDomain',
-      },
+    action = wezterm.action.SplitPane {
+      direction = 'Right',
+      size = { Percent = 40 }
+    },
   },
 }
 
