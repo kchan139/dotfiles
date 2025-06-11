@@ -3,5 +3,10 @@
     email = "ovn6002@gmail.com"
 [alias]
 	ac = "!git add . ; git commit -m"
+	st = status
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [init]
 	defaultBranch = main
+[core]
+	editor = hx
+	autocrlf = input
