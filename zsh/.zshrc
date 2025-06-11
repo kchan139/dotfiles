@@ -2,6 +2,7 @@
 alias ll='ls -alFG'
 alias la='ls -AG'
 alias l='ls -CFG'
+alias ls='ls -G'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
