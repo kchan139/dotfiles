@@ -1,12 +1,43 @@
 [user]
     name = "Khoa Tran" 
     email = "ovn6002@gmail.com"
+
 [alias]
 	ac = "!git add . ; git commit -m"
+	cm = commit
 	st = status
+	br = branch
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	last = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -1 HEAD
+	amend = commit --amend --no-edit
+
 [init]
 	defaultBranch = main
+
 [core]
 	editor = hx
 	autocrlf = input
+	excludesfile = ~/dotfiles/git/.gitignore
+
+[status]
+	showUntrackedFiles = all
+
+[advice]
+	statusHints = false
+	
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = auto
+
+[color "branch"]
+	current = green bold
+	local = green
+	remote = red bold
+
+[color "status"]
+	added = blue bold
+	changed = white bold
+	untracked = red bold
