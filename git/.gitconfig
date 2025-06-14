@@ -4,12 +4,14 @@
 
 [alias]
 	ac = "!git add . ; git commit -m"
-	cm = commit
+	co = checkout
+	ci = commit
 	st = status
 	br = branch
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	last = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -1 HEAD
 	amend = commit --amend --no-edit
+	unstage = "restore --staged"
 
 [init]
 	defaultBranch = main
@@ -25,6 +27,12 @@
 [advice]
 	statusHints = false
 	
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
 [color]
 	diff = auto
 	status = auto
