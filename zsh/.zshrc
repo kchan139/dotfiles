@@ -11,3 +11,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 export PATH=$PATH:/usr/local/go/bin
 
 eval "$(starship init zsh)"
+export PATH="/opt/homebrew/bin:$PATH"
