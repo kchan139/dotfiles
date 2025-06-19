@@ -19,7 +19,7 @@
 [core]
 	editor = hx
 	autocrlf = input
-	excludesfile = ~/dotfiles/git/.gitignore
+	excludesfile = ~/dotfiles/git/.gitignore_global
 
 [status]
 	showUntrackedFiles = all
