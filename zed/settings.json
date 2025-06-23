@@ -14,7 +14,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Terafox"
+    "dark": "Base16 Rosé Pine Moon"
   },
   "terminal": {
     "dock": "right",
