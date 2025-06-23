@@ -74,7 +74,7 @@
       "alt-b": "project_panel::CollapseSelectedEntry",
       "ctrl-]": "project_panel::ExpandSelectedEntry",
       "ctrl-f": "project_panel::ExpandSelectedEntry",
-      "ctrl-shift-c": "project_panel::CopyPath"
+      "ctrl-shift-c": "workspace::CopyPath"
     }
   },
   {
@@ -87,7 +87,7 @@
   {
     "context": "vim_mode == helix_normal && !menu",
     "bindings": {
-      "space": "vim::Space",
+      "space": "vim::WrappingRight",
       "$": "vim::EndOfLine",
       "end": "vim::EndOfLine",
       "^": "vim::FirstNonWhitespace",
@@ -170,7 +170,7 @@
       "g shift-d": "editor::GoToDeclaration",
       "g shift-i": "editor::GoToImplementation",
       "g x": "editor::OpenUrl",
-      "g f": "editor::OpenFile",
+      "g f": "editor::OpenSelectedFilename",
       "g shift-l": "vim::SelectPrevious",
       "g >": ["editor::SelectNext", { "replace_newest": true }],
       "g <": ["editor::SelectPrevious", { "replace_newest": true }],
