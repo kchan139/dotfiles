@@ -114,6 +114,16 @@ else
 
 fi
 
+# --- Zed Configuration ---
+echo ""
+echo "--- Setting up Zed configuration ---"
+ZED_CONFIG_DIR="$HOME/.config/zed"
+mkdir -p "$ZED_CONFIG_DIR"
+if [ $? -ne 0 ]; then
+    echo "  ERROR: Failed to create '$ZED_CONFIG_DIR'. Skipping Zed setup."
+else
+    link_file "$SCRIPT_DIR/zed/settings.json" "$ZED_CONFIG_DIR/settings.json" "Zed settings.json"
+fi
 
 echo ""
 echo "Dotfiles setup complete!"
