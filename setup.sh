@@ -123,6 +123,7 @@ if [ $? -ne 0 ]; then
     echo "  ERROR: Failed to create '$ZED_CONFIG_DIR'. Skipping Zed setup."
 else
     link_file "$SCRIPT_DIR/zed/settings.json" "$ZED_CONFIG_DIR/settings.json" "Zed settings.json"
+    link_file "$SCRIPT_DIR/zed/keymap.json" "$ZED_CONFIG_DIR/keymap.json" "Zed keymap.json"
 fi
 
 echo ""
