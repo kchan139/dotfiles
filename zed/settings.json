@@ -17,7 +17,8 @@
     "dark": "Base16 Rosé Pine Moon"
   },
   "terminal": {
-    "dock": "right",
+    // "dock": "right",
+    "dock": "bottom",
     "font_family": "JetBrainsMono Nerd Font",
     "default_width": 600
   }
