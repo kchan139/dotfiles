@@ -79,7 +79,7 @@ config.keys = {
     key = '`',
     mods = 'CTRL',
     action = wezterm.action.SplitPane {
-      direction = 'Right',
+      direction = 'Down',
       size = { Percent = 40 }
     },
   },

@@ -27,3 +27,11 @@ name = "cpp"
 auto-format = true
 language-servers = ["clangd"]
 formatter = { command = "clang-format", args = ["-style=Google"] }
+
+[[language]]
+name = "hcl"
+language-servers = ["terraform-ls"]
+
+[language-server.terraform-ls]
+command = "terraform-ls"
+args = ["serve"]
