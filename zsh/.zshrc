@@ -8,7 +8,7 @@ alias ls='ls -G'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias tf='terraform'
-alias tree="tree -a -I 'node_modules|.git|dist|build|target|.next|__pycache__|*.log|.DS_Store' \"\$@\""
+alias tree="tree -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
 
 export PATH=$PATH:/usr/local/go/bin
 
