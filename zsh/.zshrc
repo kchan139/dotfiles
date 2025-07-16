@@ -107,4 +107,8 @@ if [ -f ~/dotfiles/bash/.bash_aliases ]; then
     . ~/dotfiles/bash/.bash_aliases
 fi
 
+if [ -d "/usr/local/go/bin" ]; then
+  export PATH="$PATH:/usr/local/go/bin"
+fi
+
 eval "$(starship init zsh)"
