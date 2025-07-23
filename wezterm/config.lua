@@ -8,6 +8,7 @@ end
 config.automatically_reload_config = true
 
 config.font_size = 14.0
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 -- config.color_scheme = 'cyberpunk'
 -- config.color_scheme = 'Dark Violet (base16)'
 -- config.color_scheme = 'VisiBlue (terminal.sexy)'
@@ -15,12 +16,12 @@ config.color_scheme = 'SeaShells'
 
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
-config.tab_bar_at_bottom = true
+config.tab_bar_at_bottom = false
 config.hide_tab_bar_if_only_one_tab = false
 
 config.default_cursor_style = "SteadyBar"
 
-config.window_decorations = "NONE"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 -- config.window_background_opacity = 0.95
 config.window_padding = {
@@ -82,6 +83,11 @@ config.keys = {
       direction = 'Down',
       size = { Percent = 40 }
     },
+  },
+  {
+    key = 'n',
+    mods = 'SHIFT|CTRL',
+    action = wezterm.action.ToggleFullScreen,
   },
 }
 
