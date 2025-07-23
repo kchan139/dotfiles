@@ -112,3 +112,4 @@ if [ -d "/usr/local/go/bin" ]; then
 fi
 
 eval "$(starship init zsh)"
+fastfetch
