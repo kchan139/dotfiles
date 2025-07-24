@@ -5,7 +5,7 @@ My personal dotfiles.
 ## ✨ Features
 
 - Symlinks config files for:
-  - Bash, Zsh
+  - Zsh
   - Git
   - Starship
   - Helix
@@ -13,7 +13,7 @@ My personal dotfiles.
   - Zed
 - Installs packages via:
   - `dnf` on Fedora (`packages/dnf.list`)
-  - Homebrew on macOS or Linux (`packages/Brewfile`)
+  - Homebrew on macOS (`packages/Brewfile`)
 - Idempotent setup (safe to run multiple times)
 
 ## 🛠 Usage
