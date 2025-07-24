@@ -103,9 +103,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f ~/dotfiles/bash/.bash_aliases ]; then
-    . ~/dotfiles/bash/.bash_aliases
-fi
+# Personal aliases
+alias tf='terraform'
+alias tree="tree -C -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias docker='podman'
 
 if [ -d "/usr/local/go/bin" ]; then
   export PATH="$PATH:/usr/local/go/bin"

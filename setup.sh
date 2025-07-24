@@ -115,11 +115,6 @@ link_file() {
     fi
 }
 
-# --- Bash Configuration ---
-echo ""
-echo "--- Setting up Bash configuration ---"
-link_file "$SCRIPT_DIR/bash/.bashrc" "$HOME/.bashrc" ".bashrc"
-
 # --- Zsh Configuration ---
 echo ""
 echo "--- Setting up Zsh configuration ---"
