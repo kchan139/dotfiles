@@ -1,0 +1,70 @@
+tap "hashicorp/tap"
+tap "louisbrunner/valgrind"
+# Run your GitHub Actions locally
+brew "act"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Core application library for C
+brew "glib"
+# Vector graphics library with cross-device output support
+brew "cairo"
+# Cross-platform make
+brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# GitHub command-line tool
+brew "gh"
+# Glorious Glasgow Haskell Compilation System
+brew "ghc"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Language server for the Go language
+brew "gopls"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Post-modern modal text editor
+brew "helix"
+# Improved top (interactive process viewer)
+brew "htop"
+# TIFF library and utilities
+brew "libtiff"
+# Language Server for the Lua language
+brew "lua-language-server"
+# Port scanning utility for large networks
+brew "nmap"
+# Platform built on V8 to build network applications
+brew "node"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Extremely fast Python linter, written in Rust
+brew "ruff"
+# Cross-shell prompt for astronauts
+brew "starship"
+# User interface to the TELNET protocol
+brew "telnet"
+# Terraform Language Server
+brew "terraform-ls"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Language Server for Yaml Files
+brew "yaml-language-server"
+# Terraform
+brew "hashicorp/tap/terraform"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm@nightly"

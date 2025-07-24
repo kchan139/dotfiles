@@ -3,7 +3,7 @@
 # setup.sh
 # This script sets up dotfiles by creating symbolic links from this
 # repository to the appropriate locations in the home directory.
-# It is designed to work on both Linux and macOS.
+# It is designed to work on both Fedora and macOS.
 
 # Define the source directory (where this script resides)
 # This gets the directory where the script is located, handling symlinks
@@ -38,6 +38,31 @@ if command -v dnf &> /dev/null; then
 else
     echo "  WARNING: DNF not found. Skipping package installation."
 fi
+
+# --- Homebrew Package Installation ---
+echo ""
+echo "--- Installing packages from Brewfile ---"
+
+BREWFILE="$SCRIPT_DIR/packages/Brewfile"
+
+if command -v brew &> /dev/null; then
+    if [ -f "$BREWFILE" ]; then
+        echo "Do you want to install packages from Brewfile?"
+        read -p "This may take a while. Continue? (y/N): " confirm
+        if [[ "$confirm" =~ ^[yY]$ ]]; then
+            echo "Installing Homebrew packages..."
+            brew bundle --file="$BREWFILE"
+            echo "Homebrew package installation complete."
+        else
+            echo "Skipped Homebrew package installation."
+        fi
+    else
+        echo "  WARNING: $BREWFILE not found. Skipping Homebrew installation."
+    fi
+else
+    echo "  WARNING: Homebrew not found. Skipping package installation."
+fi
+
 
 # --- Function to create a symbolic link ---
 link_file() {
@@ -104,6 +129,7 @@ link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
 echo ""
 echo "--- Setting up Git configuration ---"
 link_file "$SCRIPT_DIR/git/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
+link_file "$SCRIPT_DIR/git/.gitignore_global" "$HOME/.gitignore_global" ".gitignore_global"
 
 # --- Starship Configuration ---
 echo ""
