@@ -12,6 +12,33 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 echo "Starting dotfiles setup..."
 echo "Dotfiles repository located at: $SCRIPT_DIR"
 
+# --- DNF Package Installation ---
+echo ""
+echo "--- Installing system packages from dnf.list ---"
+
+DNF_LIST="$SCRIPT_DIR/packages/dnf.list"
+
+if command -v dnf &> /dev/null; then
+    if [ -f "$DNF_LIST" ]; then
+        echo "Do you want to install system packages from dnf.list?"
+        read -p "This requires sudo privileges. Continue? (y/N): " confirm
+        if [[ "$confirm" =~ ^[yY]$ ]]; then
+            echo "Requesting sudo permissions..."
+            sudo -v || { echo "Sudo authentication failed. Skipping package install."; exit 1; }
+
+            echo "Installing packages..."
+            grep -vE '^\s*#' "$DNF_LIST" | xargs sudo dnf install -y
+            echo "Package installation complete."
+        else
+            echo "Skipped DNF package installation."
+        fi
+    else
+        echo "  WARNING: $DNF_LIST not found. Skipping package installation."
+    fi
+else
+    echo "  WARNING: DNF not found. Skipping package installation."
+fi
+
 # --- Function to create a symbolic link ---
 link_file() {
     local source_file="$1"
