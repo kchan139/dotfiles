@@ -19,5 +19,7 @@ My personal dotfiles.
 ## 🛠 Usage
 
 ```bash
+git clone https://github.com/kchan139/dotfiles.git
+cd dotfiles
 ./setup.sh
-
+```
