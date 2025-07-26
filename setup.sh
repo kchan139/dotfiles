@@ -94,6 +94,58 @@ else
     fi
 fi
 
+# --- Oh My Zsh Installation ---
+echo -e "\n${BOLD}--- Installing Oh My Zsh ---${RESET}"
+
+OH_MY_ZSH_DIR="$HOME/.oh-my-zsh"
+
+if [ -d "$OH_MY_ZSH_DIR" ]; then
+    echo -e "${GREEN}  INFO:${RESET} Oh My Zsh is already installed."
+else
+    echo -e "${YELLOW}Do you want to install Oh My Zsh?${RESET}"
+    read -p "This will download and install Oh My Zsh. Continue? (y/N): " confirm
+    if [[ "$confirm" =~ ^[yY]$ ]]; then
+        echo -e "${CYAN}Installing Oh My Zsh...${RESET}"
+        if command -v wget &> /dev/null; then
+            # Download the install script
+            wget -q https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O /tmp/oh-my-zsh-install.sh
+            if [ $? -eq 0 ]; then
+                # Run the install script with unattended mode
+                RUNZSH=no sh /tmp/oh-my-zsh-install.sh
+                if [ $? -eq 0 ]; then
+                    echo -e "${GREEN}Oh My Zsh installation complete.${RESET}"
+                    # Clean up the install script
+                    rm -f /tmp/oh-my-zsh-install.sh
+                else
+                    echo -e "${RED}  ERROR:${RESET} Oh My Zsh installation failed."
+                fi
+            else
+                echo -e "${RED}  ERROR:${RESET} Failed to download Oh My Zsh install script."
+            fi
+        elif command -v curl &> /dev/null; then
+            # Fallback to curl if wget is not available
+            curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o /tmp/oh-my-zsh-install.sh
+            if [ $? -eq 0 ]; then
+                # Run the install script with unattended mode
+                RUNZSH=no sh /tmp/oh-my-zsh-install.sh
+                if [ $? -eq 0 ]; then
+                    echo -e "${GREEN}Oh My Zsh installation complete.${RESET}"
+                    # Clean up the install script
+                    rm -f /tmp/oh-my-zsh-install.sh
+                else
+                    echo -e "${RED}  ERROR:${RESET} Oh My Zsh installation failed."
+                fi
+            else
+                echo -e "${RED}  ERROR:${RESET} Failed to download Oh My Zsh install script."
+            fi
+        else
+            echo -e "${RED}  ERROR:${RESET} Neither wget nor curl found. Cannot install Oh My Zsh."
+        fi
+    else
+        echo -e "${YELLOW}Skipped Oh My Zsh installation.${RESET}"
+    fi
+fi
+
 # --- Tmux Plugin Manager Installation ---
 echo -e "\n${BOLD}--- Installing Tmux Plugin Manager ---${RESET}"
 
