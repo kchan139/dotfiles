@@ -111,12 +111,15 @@ alias la='ls -A'
 alias l='ls -CF'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias docker='podman'
+alias yz='yazi'
 
 if [ -d "/usr/local/go/bin" ]; then
   export PATH="$PATH:/usr/local/go/bin"
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
+export EDITOR=hx
+export VISUAL=hx
 
 eval "$(starship init zsh)"
 fastfetch

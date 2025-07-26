@@ -1,0 +1,12 @@
+[opener]
+edit = [
+  { run = 'hx "$1"', desc = "Edit with Helix", block = true }
+]
+
+[mgr]
+sort_by = "natural"
+sort_reverse = false
+sort_dir_first = true
+linemode = "none"
+show_hidden = true
+show_symlink = true

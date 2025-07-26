@@ -229,4 +229,19 @@ else
     link_file "$SCRIPT_DIR/zed/keymap.json" "$ZED_CONFIG_DIR/keymap.json" "Zed keymap.json"
 fi
 
+# --- Yazi Configuration ---
+echo -e "\n${BOLD}--- Setting up Yazi configuration ---${RESET}"
+YAZI_CONFIG_DIR="$HOME/.config/yazi"
+mkdir -p "$YAZI_CONFIG_DIR"
+if [ $? -ne 0 ]; then
+    echo -e "${RED}  ERROR:${RESET} Failed to create '$YAZI_CONFIG_DIR'. Skipping Yazi setup."
+else
+    # Link all yazi config files if they exist
+    for config_file in yazi.toml keymap.toml theme.toml; do
+        if [ -f "$SCRIPT_DIR/yazi/$config_file" ]; then
+            link_file "$SCRIPT_DIR/yazi/$config_file" "$YAZI_CONFIG_DIR/$config_file" "Yazi $config_file"
+        fi
+    done
+fi
+
 echo -e "\n${GREEN}Dotfiles setup complete!${RESET}"
