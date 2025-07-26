@@ -11,6 +11,8 @@ My personal dotfiles.
   - Helix
   - WezTerm
   - Zed
+  - Tmux
+  - Yazi
 - Installs packages via:
   - `dnf` on Fedora (`packages/dnf.list`)
   - Homebrew on macOS (`packages/Brewfile`)
