@@ -14,7 +14,7 @@ config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 -- config.color_scheme = 'VisiBlue (terminal.sexy)'
 config.color_scheme = 'SeaShells'
 
-config.enable_tab_bar = true
+config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = false
 config.hide_tab_bar_if_only_one_tab = false
@@ -75,14 +75,6 @@ config.keys = {
     key = 'l',
     mods = 'CTRL|SHIFT',
     action = wezterm.action.ActivatePaneDirection 'Right',
-  },
-  {
-    key = '`',
-    mods = 'CTRL',
-    action = wezterm.action.SplitPane {
-      direction = 'Down',
-      size = { Percent = 40 }
-    },
   },
   {
     key = 'n',

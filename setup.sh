@@ -94,6 +94,34 @@ else
     fi
 fi
 
+# --- Tmux Plugin Manager Installation ---
+echo -e "\n${BOLD}--- Installing Tmux Plugin Manager ---${RESET}"
+
+TPM_DIR="$HOME/.tmux/plugins/tpm"
+
+if [ -d "$TPM_DIR" ]; then
+    echo -e "${GREEN}  INFO:${RESET} Tmux Plugin Manager is already installed."
+else
+    echo -e "${YELLOW}Do you want to install Tmux Plugin Manager?${RESET}"
+    read -p "This will clone the TPM repository. Continue? (y/N): " confirm
+    if [[ "$confirm" =~ ^[yY]$ ]]; then
+        echo -e "${CYAN}Installing Tmux Plugin Manager...${RESET}"
+        if command -v git &> /dev/null; then
+            mkdir -p "$HOME/.tmux/plugins"
+            git clone https://github.com/tmux-plugins/tpm "$TPM_DIR"
+            if [ $? -eq 0 ]; then
+                echo -e "${GREEN}Tmux Plugin Manager installation complete.${RESET}"
+            else
+                echo -e "${RED}  ERROR:${RESET} Failed to clone TPM repository."
+            fi
+        else
+            echo -e "${RED}  ERROR:${RESET} git not found. Cannot install TPM."
+        fi
+    else
+        echo -e "${YELLOW}Skipped TPM installation.${RESET}"
+    fi
+fi
+
 # --- Function to create a symbolic link ---
 link_file() {
     local source_file="$1"
@@ -153,6 +181,10 @@ link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
 echo -e "\n${BOLD}--- Setting up Git configuration ---${RESET}"
 link_file "$SCRIPT_DIR/git/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
 link_file "$SCRIPT_DIR/git/.gitignore_global" "$HOME/.gitignore_global" ".gitignore_global"
+
+# --- Tmux Configuration ---
+echo -e "\n${BOLD}--- Setting up Tmux configuration ---${RESET}"
+link_file "$SCRIPT_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf" ".tmux.conf"
 
 # --- Starship Configuration ---
 echo -e "\n${BOLD}--- Setting up Starship configuration ---${RESET}"
