@@ -3,10 +3,17 @@ edit = [
   { run = 'hx "$1"', desc = "Edit with Helix", block = true }
 ]
 
+[preview]
+wrap = "yes"
+
+[input]
+cursor_blink = true
+
 [mgr]
 sort_by = "natural"
 sort_reverse = false
 sort_dir_first = true
-linemode = "none"
+linemode = "size"
 show_hidden = true
 show_symlink = true
+ratio = [1, 3, 4]
