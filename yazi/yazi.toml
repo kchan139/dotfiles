@@ -10,6 +10,7 @@ wrap = "yes"
 cursor_blink = true
 
 [mgr]
+title_format = "Yazi"
 sort_by = "natural"
 sort_reverse = false
 sort_dir_first = true
