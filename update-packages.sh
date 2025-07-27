@@ -13,7 +13,7 @@ echo "Updating package lists..."
 # DNF (Fedora)
 if command -v dnf5 &>/dev/null || command -v dnf &>/dev/null; then
   echo "Generating DNF package list..."
-  rpm -qa --qf '%{NAME}\n' | sort -u > "$DNF_LIST"
+  dnf5 repoquery --userinstalled --qf '%{name}\n' | sort -u > "$DNF_LIST"
   echo "DNF list updated at $DNF_LIST"
 else
   echo "DNF not found. Skipping DNF package list."

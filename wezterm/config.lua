@@ -6,12 +6,10 @@ if wezterm.config_builder then
 end
 
 config.automatically_reload_config = true
+config.enable_wayland = false
 
 config.font_size = 14.0
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
--- config.color_scheme = 'cyberpunk'
--- config.color_scheme = 'Dark Violet (base16)'
--- config.color_scheme = 'VisiBlue (terminal.sexy)'
 config.color_scheme = 'SeaShells'
 
 config.enable_tab_bar = false
@@ -23,7 +21,6 @@ config.default_cursor_style = "SteadyBar"
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_close_confirmation = "NeverPrompt"
--- config.window_background_opacity = 0.95
 config.window_padding = {
   left = 3,
   right = 3,
@@ -55,27 +52,6 @@ config.background = {
 }
 
 config.keys = {
-  -- Navigation
-  {
-    key = 'h',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection 'Left',
-  },
-  {
-    key = 'j',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection 'Down',
-  },
-  {
-    key = 'k',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection 'Up',
-  },
-  {
-    key = 'l',
-    mods = 'CTRL|SHIFT',
-    action = wezterm.action.ActivatePaneDirection 'Right',
-  },
   {
     key = 'n',
     mods = 'SHIFT|CTRL',
