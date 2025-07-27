@@ -6,7 +6,6 @@ cursor-shape.insert = "bar"
 cursor-shape.select = "hidden"
 soft-wrap.enable = true
 
-# Keybindings for insert mode
 [keys.insert]
 "A-h" = "move_char_left"
 "A-j" = "move_line_down"
@@ -14,12 +13,3 @@ soft-wrap.enable = true
 "A-l" = "move_char_right"
 "S-A-l" = "goto_line_end"
 "S-A-h" = "goto_line_start"
-
-# up = "no_op"
-# down = "no_op"
-# left = "no_op"
-# right = "no_op"
-# pageup = "no_op"
-# pagedown = "no_op"
-home = "no_op"
-end = "no_op"

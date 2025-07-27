@@ -33,7 +33,7 @@ config.text_background_opacity = 1.0
 config.background = {
   {
     source = {
-      File = os.getenv("HOME") .. "/dotfiles/img/sand_dunes.jpg",
+      File = os.getenv("HOME") .. "/dotfiles/img/mountain.jpg",
     },
     hsb = {
       hue = 1.0,
@@ -47,7 +47,7 @@ config.background = {
     },
     width = "100%",
     height = "100%",
-    opacity = 0.55,
+    opacity = 0.69,
   },
 }
 
