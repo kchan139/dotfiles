@@ -22,8 +22,8 @@ config.default_cursor_style = "SteadyBar"
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.window_padding = {
-  left = 3,
-  right = 3,
+  left = 25,
+  right = 25,
   top = 0,
   bottom = 0,
 }
