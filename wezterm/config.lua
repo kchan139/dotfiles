@@ -10,7 +10,12 @@ config.enable_wayland = false
 
 config.font_size = 14.0
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
-config.color_scheme = 'SeaShells'
+-- config.color_scheme = 'SeaShells'
+-- config.color_scheme = 'Aura (Gogh)'
+-- config.color_scheme = 'Banana Blueberry'
+config.color_scheme = 'Framer (base16)'
+-- config.color_scheme = 'rose-pine'
+-- config.color_scheme = 'Vice Dark (base16)'
 
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
