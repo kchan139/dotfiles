@@ -13,9 +13,13 @@ My personal dotfiles.
   - Zed
   - Tmux
   - Yazi
+  - Btop
+  - Fastfetch
+  
 - Installs packages via:
   - `dnf` on Fedora (`packages/dnf.list`)
   - Homebrew on macOS (`packages/Brewfile`)
+
 - Idempotent setup (safe to run multiple times)
 
 ## 🛠 Usage
