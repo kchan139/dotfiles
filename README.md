@@ -13,7 +13,6 @@ My personal dotfiles.
   - Zed
   - Tmux
   - Yazi
-  - Btop
   - Fastfetch
   
 - Installs packages via:
