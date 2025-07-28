@@ -22,6 +22,8 @@ My personal dotfiles.
 
 - Idempotent setup (safe to run multiple times)
 
+![preview](img/preview.png)
+
 ## 🛠 Usage
 
 ```bash
