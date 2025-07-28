@@ -42,12 +42,12 @@ fastfetch --config hyde/*.jsonc
       "type": "host",
       "key": "  󰍛 Host    ",
       "keyColor": "blue",
-      "format": "{5} {2} ({3})"
+      "format": "{5} {2}"
     },
     {
       "type": "packages",
       "key": "  󰏗 Packages",
-      "keyColor": "green"
+      "keyColor": "blue"
     },
     {
       "type": "shell",
@@ -63,7 +63,7 @@ fastfetch --config hyde/*.jsonc
     {
       "type": "battery",
       "key": "   Battery ",
-      "keyColor": "yellow",
+      "keyColor": "green",
       "format": "{4} - {12} hours, {13} minutes"
     },
     {
