@@ -8,19 +8,55 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "icon_theme": "Catppuccin Latte",
-  "vim_mode": true,
+  "autosave": "on_focus_change",
   "helix_mode": true,
+  "ui_font_family": "Zed Plex Sans",
+  "ui_font_weight": 400, // Font weight in standard CSS units from 100 to 900.
   "ui_font_size": 16,
-  "buffer_font_size": 14,
+
+  "buffer_font_family": "Zed Plex Mono", // Font name for editor buffers
+  "buffer_font_size": 14, // Font size for editor buffers
+  "buffer_font_weight": 400, // Font weight in CSS units [100-900]
+  "buffer_line_height": "comfortable",
+  "buffer_font_features": {
+    "calt": false // Disable ligatures
+  },
+
+  "agent_font_size": 14,
+
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "One Light",
     "dark": "Base16 Rosé Pine Moon"
   },
+
   "terminal": {
-    // "dock": "right",
     "dock": "bottom",
-    "font_family": "JetBrainsMono Nerd Font",
-    "default_width": 600
+    "font_family": "JetBrainsMono Nerd Font Mono",
+    "font_size": 14,
+    "default_height": 400,
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    }
+  },
+
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": true,
+    "show_user_picture": true,
+    "show_sign_in": true,
+    "show_menus": false
+  },
+
+  "minimap": {
+    "show": "always",
+    "thumb": "always",
+    "thumb_border": "left_open",
+    "current_line_highlight": null
   }
 }
