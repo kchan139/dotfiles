@@ -29,6 +29,7 @@ bluedevil
 brcmfmac-firmware
 breeze-icon-theme
 breeze-icon-theme-fedora
+btop
 btrfs-progs
 bzip2
 chrony
@@ -139,7 +140,6 @@ gwenview
 helix
 hfsplus-tools
 hostname
-htop
 hunspell
 intel-audio-firmware
 intel-gpu-firmware

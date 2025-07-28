@@ -24,17 +24,12 @@ fastfetch --config hyde/*.jsonc
     },
     {
       "type": "custom",
-      "format": "┌───────────────────────────────────────────────┐"
-    },
-    {
-      "type": "chassis",
-      "key": "  󰇺 Chassis ",
-      "format": "{1} {2} {3}"
+      "format": "────────────────────────────────────────────────────────────"
     },
     {
       "type": "os",
-      "key": "  󰍹 OS      ",
-      "format": "{2} {8} {10} {12}",
+      "key": "   OS      ",
+      "format": "{2} {8} {10}",
       "keyColor": "red"
     },
     {
@@ -44,15 +39,21 @@ fastfetch --config hyde/*.jsonc
       "keyColor": "red"
     },
     {
+      "type": "host",
+      "key": "  󰍛 Host    ",
+      "keyColor": "blue",
+      "format": "{5} {2} ({3})"
+    },
+    {
       "type": "packages",
       "key": "  󰏗 Packages",
       "keyColor": "green"
     },
     {
-      "type": "display",
-      "key": "  󰍹 Display ",
-      "format": "{1}x{2} @ {3}Hz [{7}]",
-      "keyColor": "green"
+      "type": "shell",
+      "key": "   Shell   ",
+      "keyColor": "yellow",
+      "format": "{6} ({4})"
     },
     {
       "type": "terminal",
@@ -60,24 +61,47 @@ fastfetch --config hyde/*.jsonc
       "keyColor": "yellow"
     },
     {
-      "type": "custom",
-      "format": "└───────────────────────────────────────────────┘"
+      "type": "battery",
+      "key": "   Battery ",
+      "keyColor": "yellow",
+      "format": "{4} - {12} hours, {13} minutes"
     },
+    {
+      "type": "uptime",
+      "key": "  󱫐 Uptime  ",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "localip",
+      "key": "  󰩟 Local IP",
+      "format": "{1} ({4})",
+      "keyColor": "cyan"
+    },
+    // {
+    //   "type": "custom",
+    //   "format": "─────────────────"
+    // },
     "break",
     {
       "type": "title",
       "key": "  ",
-      "format": "{6} {7} {8}"
+      "format": "{6}{7}{8}"
     },
     {
       "type": "custom",
-      "format": "┌───────────────────────────────────────────────┐"
+      "format": "────────────────────────────────────────────────────────────"
+    },
+    {
+      "type": "display",
+      "key": "  󰍹 Display   ",
+      "format": "{1}{2} @ {3}Hz [{7}]",
+      "keyColor": "green"
     },
     {
       "type": "cpu",
       "format": "{1} @ {7}",
       "key": "   CPU       ",
-      "keyColor": "blue"
+      "keyColor": "yellow"
     },
     {
       "type": "gpu",
@@ -89,7 +113,7 @@ fastfetch --config hyde/*.jsonc
       "type": "gpu",
       "format": "{3}",
       "key": "   GPU Driver",
-      "keyColor": "magenta"
+      "keyColor": "blue"
     },
     {
       "type": "memory",
@@ -97,26 +121,21 @@ fastfetch --config hyde/*.jsonc
       "keyColor": "magenta"
     },
     {
+      "type": "swap",
+      "key": "   Swap      ",
+      "keyColor": "magenta",
+      "format": "{1} / {2} ({3})"
+    },
+    {
       "type": "disk",
       "key": "   Disk      ",
-      "folders": "/",
+      // "folders": "/",
       "keyColor": "red",
-      "format": "{1} / {2} ({3})",
-    },
-    {
-      "type": "uptime",
-      "key": "  󱫐 Uptime    ",
-      "keyColor": "red"
-    },
-    {
-      "type": "battery",
-      "key": "   Battery   ",
-      "keyColor": "yellow",
-      "format": "{4} - {12} hours, {13} minutes"
+      "format": "{1} / {2} ({3}) [{20}]",
     },
     {
       "type": "custom",
-      "format": "└───────────────────────────────────────────────┘"
+      "format": "────────────────────"
     },
     {
       "type": "colors",
