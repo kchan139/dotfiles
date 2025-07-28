@@ -306,15 +306,5 @@ else
     link_file "$SCRIPT_DIR/fastfetch/config.jsonc" "$FASTFETCH_CONFIG_DIR/config.jsonc" "Fastfetch config.jsonc"
 fi
 
-# --- Btop Configuration ---
-echo -e "\n${BOLD}--- Setting up Btop configuration ---${RESET}"
-BTOP_CONFIG_DIR="$HOME/.config/btop"
-mkdir -p "$BTOP_CONFIG_DIR"
-if [ $? -ne 0 ]; then
-    echo -e "${RED}  ERROR:${RESET} Failed to create '$BTOP_CONFIG_DIR'. Skipping Btop setup."
-else
-    link_file "$SCRIPT_DIR/btop/btop.conf" "$BTOP_CONFIG_DIR/btop.conf" "Btop btop.conf"
-fi
-
 
 echo -e "\n${GREEN}Dotfiles setup complete!${RESET}"
