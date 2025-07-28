@@ -28,13 +28,13 @@ fastfetch --config hyde/*.jsonc
     },
     {
       "type": "os",
-      "key": "   OS      ",
+      "key": "   OS      ",
       "format": "{2} {8} {10}",
       "keyColor": "red"
     },
     {
       "type": "kernel",
-      "key": "   Kernel  ",
+      "key": "  󰠰 Kernel  ",
       "format": "{2}",
       "keyColor": "red"
     },
@@ -51,30 +51,41 @@ fastfetch --config hyde/*.jsonc
     },
     {
       "type": "shell",
-      "key": "   Shell   ",
+      "key": "   Shell   ",
       "keyColor": "yellow",
       "format": "{6} ({4})"
     },
     {
       "type": "terminal",
-      "key": "   Terminal",
+      "key": "   Terminal",
       "keyColor": "yellow"
     },
     {
       "type": "battery",
       "key": "   Battery ",
       "keyColor": "green",
-      "format": "{4} - {12} hours, {13} minutes"
+      "format": "{4} - {12} hours, {13} minutes left"
     },
     {
       "type": "uptime",
       "key": "  󱫐 Uptime  ",
-      "keyColor": "cyan"
+      "keyColor": "green"
+    },
+    {
+      "type": "datetime",
+      "key": "   DateTime",
+      "keyColor": "green",
+      "format": "{9}, {23}/{4}/{1} · {14}:{18}"
     },
     {
       "type": "localip",
-      "key": "  󰩟 Local IP",
+      "key": "  󱦂 Local IP",
       "format": "{1} ({4})",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "dns",
+      "key": "   DNS     ",
       "keyColor": "cyan"
     },
     // {
@@ -94,7 +105,7 @@ fastfetch --config hyde/*.jsonc
     {
       "type": "display",
       "key": "  󰍹 Display   ",
-      "format": "{1}{2} @ {3}Hz [{7}]",
+      "format": "{1}  {2} @ {3}Hz [{7}]",
       "keyColor": "green"
     },
     {
@@ -117,21 +128,21 @@ fastfetch --config hyde/*.jsonc
     },
     {
       "type": "memory",
-      "key": "   Memory    ",
+      "key": "  󰘚 Memory    ",
+      "format": "{1} → {2} ({3})",
       "keyColor": "magenta"
     },
     {
       "type": "swap",
       "key": "   Swap      ",
       "keyColor": "magenta",
-      "format": "{1} / {2} ({3})"
+      "format": "{1} → {2} ({3})"
     },
     {
       "type": "disk",
       "key": "   Disk      ",
-      // "folders": "/",
       "keyColor": "red",
-      "format": "{1} / {2} ({3}) [{20}]",
+      "format": "{1} → {2} ({3}) [{20}]"
     },
     {
       "type": "custom",
