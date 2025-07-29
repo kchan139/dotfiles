@@ -4,13 +4,13 @@ continuation_prompt = "[▸▹ ](dimmed white)"
 
 format = """($nix_shell$container$fill$git_metrics\n)$cmd_duration\
 $os\
+$sudo\
 $hostname\
 $localip\
 $shlvl\
 $shell\
 $env_var\
 $jobs\
-$sudo\
 $username\
 $character\
 $time"""
@@ -105,9 +105,9 @@ format = "[$env_value]($style)"
 style = 'green italic'
 
 [sudo]
-format = "[$symbol]($style)"
-style = "bold italic bright-purple"
-symbol = "⋈┈"
+format = "[ $symbol]($style)"
+style = "bold italic bright-green"
+symbol = "󰇈"
 disabled = false
 
 [hostname]
@@ -126,9 +126,9 @@ Fedora = " "
 Macos = " "
 
 [username]
-style_user = "bright-yellow bold"
+style_user = "bright-green bold"
 style_root = "purple bold"
-format = "[ ⭘ $user]($style) "
+format = "[  $user]($style) "
 disabled = false
 show_always = true
 
@@ -158,7 +158,7 @@ disabled = false
 
 [time]
 disabled = false
-format = "[$time ]($style)"
+format = "[$time  ]($style)"
 time_format = "%R"
 utc_time_offset = "local"
 style = "italic dimmed white"
@@ -179,20 +179,6 @@ deleted_style = 'italic dimmed red'
 ignore_submodules = true
 disabled = true
 
-# [git_status]
-# style = "bold italic bright-blue"
-# format = "([ $ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed ]($style))"
-# conflicted = "[◪◦](italic bright-magenta)"
-# ahead = "[▴│[${count}](bold white)│](italic green)"
-# behind = "[▿│[${count}](bold white)│](italic red)"
-# diverged = "[◇ ▴┤[${ahead_count}](regular white)│▿┤[${behind_count}](regular white)│](italic bright-magenta)"
-# untracked = "[◌◦](italic bright-yellow)"
-# stashed = "[◃◈](italic white)"
-# modified = "[●◦](italic yellow)"
-# staged = "[▪┤[$count](bold white)│](italic bright-cyan)"
-# renamed = "[◎◦](italic bright-blue)"
-# deleted = "[✕](italic red)"
-
 [git_status]
 style = "bold italic bright-blue"
 format = "([ $ahead_behind$staged$modified$untracked$renamed$deleted$conflicted$stashed ]($style))"
@@ -203,7 +189,7 @@ behind     = "[⇣${count}](italic red)"
 diverged   = "[⇕ ⇡${ahead_count} ⇣${behind_count}](italic bright-magenta)"
 
 # Local changes
-staged     = "[✔${count}](italic bright-cyan)"
+staged     = "[✔ ${count}](italic bright-cyan)"
 modified   = "[!](italic yellow)"
 untracked  = "[?](italic bright-yellow)"
 deleted    = "[✘](italic red)"
