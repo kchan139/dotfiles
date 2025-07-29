@@ -205,7 +205,7 @@ renamed = "[◎◦](italic bright-blue)"
 deleted = "[✕](italic red)"
 
 [lua]
-format = "[${symbol}${version}]($style)"
+format = " [${symbol}${version}]($style)"
 version_format = "${raw}"
 symbol = "󰢱 "
 style = "bold bright-red"
