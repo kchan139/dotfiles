@@ -7,6 +7,7 @@ akmod-nvidia
 alsa-sof-firmware
 alsa-ucm
 alsa-utils
+ansible
 ark
 atheros-firmware
 at-spi2-atk
@@ -61,7 +62,9 @@ default-fonts-other-serif
 deltarpm
 dhcp-client
 dnf5
+dnf5-plugin-automatic
 dnf5-plugins
+dnf-plugins-core
 dolphin
 dos2unix
 dosfstools
@@ -195,6 +198,7 @@ kmahjongg
 kmenuedit
 kmines
 kmod-nvidia-6.15.7-200.fc42.x86_64
+kmod-nvidia-6.15.8-200.fc42.x86_64
 kmouth
 kolourpaint
 konsole
@@ -369,6 +373,7 @@ systemd-resolved
 systemd-udev
 tar
 tcpdump
+terraform
 time
 tiwilink-firmware
 tk8
