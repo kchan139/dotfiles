@@ -8,7 +8,7 @@ end
 config.automatically_reload_config = true
 config.enable_wayland = false
 
-config.font_size = 14.0
+config.font_size = 12.0
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 -- config.color_scheme = 'SeaShells'
 -- config.color_scheme = 'Aura (Gogh)'

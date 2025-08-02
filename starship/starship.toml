@@ -238,7 +238,7 @@ version_format = "${raw}"
 style = "bold bright-red"
 
 [package]
-format = "[$symbol$version]($style)"
+format = " [$symbol$version]($style)"
 version_format = "${raw}"
 symbol = " "
 style = "dimmed yellow italic bold"
