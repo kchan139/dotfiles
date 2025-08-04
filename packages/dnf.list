@@ -26,6 +26,7 @@ bash-completion
 bat
 bc
 bind-utils
+black
 bluedevil
 brcmfmac-firmware
 breeze-icon-theme
@@ -120,6 +121,9 @@ glibc-devel
 gnome-disk-utility
 gnupg2
 gocryptfs
+golang
+golang-x-tools-goimports
+gopls
 grub2-efi-ia32
 grub2-efi-ia32-cdboot
 grub2-efi-x64
@@ -328,6 +332,8 @@ prefixdevname
 procps-ng
 psacct
 python3-augeas
+python3-lsp-server
+python3-passlib
 python3-rapidfuzz
 python3-tkinter
 qrca
@@ -374,6 +380,7 @@ systemd-udev
 tar
 tcpdump
 terraform
+terraform-ls
 time
 tiwilink-firmware
 tk8
