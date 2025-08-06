@@ -115,6 +115,7 @@ gcc-c++
 ghostscript
 ghostscript-tools-fontutils
 git-core
+git-filter-repo
 glibc
 glibc-all-langpacks
 glibc-devel
