@@ -31,6 +31,8 @@ formatter = { command = "clang-format", args = ["-style=Google"] }
 [[language]]
 name = "hcl"
 language-servers = ["terraform-ls"]
+auto-format = true
+formatter = { command = "tofu", args = ["fmt", "-"] }
 
 [language-server.terraform-ls]
 command = "terraform-ls"
