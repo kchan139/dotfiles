@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Personal aliases
-alias tf='terraform'
+alias tf='tofu'
 alias tree="tree -C -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
 alias ll='ls -alF'
 alias la='ls -A'

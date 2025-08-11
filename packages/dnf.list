@@ -288,6 +288,7 @@ openh264
 opensc
 openssh-clients
 openssh-server
+opentofu
 PackageKit-command-not-found
 PackageKit-gstreamer-plugin
 pam-kwallet
@@ -390,7 +391,6 @@ systemd-resolved
 systemd-udev
 tar
 tcpdump
-terraform
 terraform-ls
 time
 tiwilink-firmware
