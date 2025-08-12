@@ -225,13 +225,6 @@ libdnf5-plugin-expired-pgp-keys
 libertas-firmware
 libglvnd-gles
 libhandy
-libreoffice-calc
-libreoffice-draw
-libreoffice-emailmerge
-libreoffice-graphicfilter
-libreoffice-impress
-libreoffice-math
-libreoffice-writer
 libstdc++-devel
 libuser
 libva-intel-media-driver
