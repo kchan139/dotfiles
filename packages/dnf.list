@@ -334,6 +334,7 @@ ppp
 prefixdevname
 procps-ng
 psacct
+python3-ansible-lint
 python3-augeas
 python3-dotenv
 python3-dotenv+cli
