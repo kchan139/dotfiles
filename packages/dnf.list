@@ -266,6 +266,7 @@ NetworkManager-wifi
 NetworkManager-wwan
 nmap-ncat
 nodejs
+nodejs-bash-language-server
 nodejs-docs
 nodejs-full-i18n
 nodejs-libs
