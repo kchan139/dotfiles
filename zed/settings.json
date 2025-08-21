@@ -12,17 +12,17 @@
   "helix_mode": true,
   "ui_font_family": "Zed Plex Sans",
   "ui_font_weight": 400, // Font weight in standard CSS units from 100 to 900.
-  "ui_font_size": 16,
+  "ui_font_size": 14,
 
   "buffer_font_family": "Zed Plex Mono", // Font name for editor buffers
-  "buffer_font_size": 14, // Font size for editor buffers
+  "buffer_font_size": 12, // Font size for editor buffers
   "buffer_font_weight": 400, // Font weight in CSS units [100-900]
   "buffer_line_height": "comfortable",
   "buffer_font_features": {
     "calt": false // Disable ligatures
   },
 
-  "agent_font_size": 14,
+  "agent_font_size": 12,
 
   "theme": {
     "mode": "dark",
@@ -33,7 +33,7 @@
   "terminal": {
     "dock": "bottom",
     "font_family": "JetBrainsMono Nerd Font Mono",
-    "font_size": 14,
+    "font_size": 12,
     "default_height": 400,
     "detect_venv": {
       "on": {
