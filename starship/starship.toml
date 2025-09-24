@@ -124,6 +124,9 @@ disabled = false
 [os.symbols]
 Fedora = " "
 Macos = " "
+Arch = " "
+Ubuntu = " "
+Windows = " "
 
 [username]
 style_user = "bright-green bold"
