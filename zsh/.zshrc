@@ -75,6 +75,10 @@ plugins=(copyfile copypath catimg command-not-found web-search)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+# Attach or create tmux session automatically
+if [ -z "$TMUX" ]; then
+  tmux attach || tmux new
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -123,4 +127,3 @@ export EDITOR=hx
 export VISUAL=hx
 
 eval "$(starship init zsh)"
-fastfetch
