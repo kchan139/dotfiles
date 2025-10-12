@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="jonathan"
+ZSH_THEME="mortalscumbag" # set by `omz`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # Attach or create tmux session automatically
-if [ -z "$TMUX" ]; then
+if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
   tmux attach || tmux new
 fi
 
@@ -109,6 +109,7 @@ fi
 
 # Personal aliases
 alias ll='ls -alF'
+alias llz='ls -lAZ'
 alias la='ls -A'
 alias l='ls -CF'
 alias tf='tofu'
@@ -126,4 +127,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=hx
 export VISUAL=hx
 
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
