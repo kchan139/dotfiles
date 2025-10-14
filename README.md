@@ -21,11 +21,10 @@ My personal dotfiles (ignore my commit messages).
 
 - Idempotent setup (safe to run multiple times)
 
-![preview](img/preview.png)
-
 ## 🛠 Usage
 
 ```bash
+cd ~
 git clone https://github.com/kchan139/dotfiles.git
 cd dotfiles
 ./setup.sh

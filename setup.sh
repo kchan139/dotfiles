@@ -232,7 +232,6 @@ link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
 # --- Git Configuration ---
 echo -e "\n${BOLD}--- Setting up Git configuration ---${RESET}"
 link_file "$SCRIPT_DIR/git/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
-link_file "$SCRIPT_DIR/git/.gitignore_global" "$HOME/.gitignore_global" ".gitignore_global"
 
 # --- Tmux Configuration ---
 echo -e "\n${BOLD}--- Setting up Tmux configuration ---${RESET}"
