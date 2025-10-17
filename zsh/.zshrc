@@ -112,13 +112,16 @@ alias ll='ls -alF'
 alias llz='ls -lAZ'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias k='kubectl'
 alias tf='tofu'
 alias yz='yazi'
 alias ff='fastfetch'
+alias cpf='copyfile'
+
 alias docker='podman'
-alias k='kubectl'
+
 alias tree="tree -C -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 jsontree() {
   tree -J -C -a -I "node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store" "$@" | jq '.'
 }
