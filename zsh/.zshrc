@@ -121,7 +121,7 @@ alias cpf='copyfile'
 
 alias docker='podman'
 
-alias tree="tree -C -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
+alias tree="eza -T --icons -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
 jsontree() {
   tree -J -C -a -I "node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store" "$@" | jq '.'
 }
