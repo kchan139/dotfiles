@@ -7,12 +7,13 @@ My personal dotfiles (ignore my commit messages).
 - Symlinks config files for:
   - Zsh
   - Git
-  - Starship
-  - Helix
-  - WezTerm
+  - Eza
   - Zed
   - Tmux
   - Yazi
+  - Helix
+  - WezTerm
+  - Starship
   - Fastfetch
   
 - Installs packages via:

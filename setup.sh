@@ -306,4 +306,15 @@ else
 fi
 
 
+# --- Eza Configuration ---
+echo -e "\n${BOLD}--- Setting up Eza configuration ---${RESET}"
+EZA_CONFIG_DIR="$HOME/.config/eza"
+mkdir -p "$EZA_CONFIG_DIR"
+if [ $? -ne 0 ]; then
+    echo -e "${RED}  ERROR:${RESET} Failed to create '$EZA_CONFIG_DIR'. Skipping eza setup."
+else
+    link_file "$SCRIPT_DIR/eza/theme.yml" "$EZA_CONFIG_DIR/theme.yml" "eza theme.yml"
+fi
+
+
 echo -e "\n${GREEN}Dotfiles setup complete!${RESET}"

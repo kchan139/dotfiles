@@ -108,10 +108,10 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Personal aliases
-alias ll='ls -alF'
-alias llz='ls -lAZ'
-alias la='ls -A'
-alias l='ls -CF'
+alias ls='eza --icons'
+alias ll='eza -laZF -s type --icons'
+alias la='eza -a -s type --icons'
+alias l='eza -1F -s type --icons'
 
 alias k='kubectl'
 alias tf='tofu'
@@ -133,5 +133,6 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=hx
 export VISUAL=hx
+export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 # eval "$(starship init zsh)"
