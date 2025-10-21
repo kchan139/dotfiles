@@ -63,7 +63,7 @@ zstyle ':omz:update' frequency 7
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM="$HOME/dotfiles/config/zsh"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -75,10 +75,6 @@ plugins=(copyfile copypath catimg command-not-found web-search)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-# Attach or create tmux session automatically
-if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
-  tmux attach || tmux new
-fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -106,33 +102,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Personal aliases
-alias ls='eza --icons'
-alias ll='eza -laZF -s type --icons'
-alias la='eza -a -s type --icons'
-alias l='eza -1F -s type --icons'
-
-alias k='kubectl'
-alias tf='tofu'
-alias yz='yazi'
-alias ff='fastfetch'
-alias cpf='copyfile'
-
-alias docker='podman'
-
-alias tree="eza -T --icons -a -I 'node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store' \"\$@\""
-jsontree() {
-  tree -J -C -a -I "node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store" "$@" | jq '.'
-}
-
-if [ -d "/usr/local/go/bin" ]; then
-  export PATH="$PATH:/usr/local/go/bin"
-fi
-
-export PATH="$HOME/.local/bin:$PATH"
-export EDITOR=hx
-export VISUAL=hx
-export EZA_CONFIG_DIR="$HOME/.config/eza"
-
-# eval "$(starship init zsh)"
