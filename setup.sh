@@ -227,19 +227,19 @@ link_file() {
 
 # --- Zsh Configuration ---
 echo -e "\n${BOLD}--- Setting up Zsh configuration ---${RESET}"
-link_file "$SCRIPT_DIR/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
+link_file "$SCRIPT_DIR/config/zsh/.zshrc" "$HOME/.zshrc" ".zshrc"
 
 # --- Git Configuration ---
 echo -e "\n${BOLD}--- Setting up Git configuration ---${RESET}"
-link_file "$SCRIPT_DIR/git/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
+link_file "$SCRIPT_DIR/config/git/.gitconfig" "$HOME/.gitconfig" ".gitconfig"
 
 # --- Tmux Configuration ---
 echo -e "\n${BOLD}--- Setting up Tmux configuration ---${RESET}"
-link_file "$SCRIPT_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf" ".tmux.conf"
+link_file "$SCRIPT_DIR/config/tmux/.tmux.conf" "$HOME/.tmux.conf" ".tmux.conf"
 
 # --- Starship Configuration ---
 echo -e "\n${BOLD}--- Setting up Starship configuration ---${RESET}"
-link_file "$SCRIPT_DIR/starship/starship.toml" "$HOME/.config/starship.toml" "starship.toml"
+link_file "$SCRIPT_DIR/config/starship/starship.toml" "$HOME/.config/starship.toml" "starship.toml"
 
 # --- Helix Configuration ---
 echo -e "\n${BOLD}--- Setting up Helix configuration ---${RESET}"
@@ -248,10 +248,10 @@ mkdir -p "$HOME/.config/helix"
 if [ $? -ne 0 ]; then
     echo -e "${RED}  ERROR:${RESET} Failed to create '$HOME/.config/helix'. Skipping Helix setup."
 else
-    link_file "$SCRIPT_DIR/helix/config.toml" "$HOME/.config/helix/config.toml" "Helix config.toml"
+    link_file "$SCRIPT_DIR/config/helix/config.toml" "$HOME/.config/helix/config.toml" "Helix config.toml"
 
-    if [ -f "$SCRIPT_DIR/helix/languages.toml" ]; then
-        link_file "$SCRIPT_DIR/helix/languages.toml" "$HOME/.config/helix/languages.toml" "Helix languages.toml"
+    if [ -f "$SCRIPT_DIR/config/helix/languages.toml" ]; then
+        link_file "$SCRIPT_DIR/config/helix/languages.toml" "$HOME/.config/helix/languages.toml" "Helix languages.toml"
     else
         echo -e "${GREEN}  INFO:${RESET} No languages.toml found. Skipping."
     fi
@@ -264,9 +264,9 @@ mkdir -p "$WEZTERM_CONFIG_DIR"
 if [ $? -ne 0 ]; then
     echo -e "${RED}  ERROR:${RESET} Failed to create '$WEZTERM_CONFIG_DIR'. Skipping WezTerm setup."
 else
-    link_file "$SCRIPT_DIR/wezterm/wezterm.lua" "$WEZTERM_CONFIG_DIR/wezterm.lua" "WezTerm wezterm.lua"
-    link_file "$SCRIPT_DIR/wezterm/events.lua" "$WEZTERM_CONFIG_DIR/events.lua" "WezTerm events.lua"
-    link_file "$SCRIPT_DIR/wezterm/config.lua" "$WEZTERM_CONFIG_DIR/config.lua" "WezTerm config.lua"
+    link_file "$SCRIPT_DIR/config/wezterm/wezterm.lua" "$WEZTERM_CONFIG_DIR/wezterm.lua" "WezTerm wezterm.lua"
+    link_file "$SCRIPT_DIR/config/wezterm/events.lua" "$WEZTERM_CONFIG_DIR/events.lua" "WezTerm events.lua"
+    link_file "$SCRIPT_DIR/config/wezterm/config.lua" "$WEZTERM_CONFIG_DIR/config.lua" "WezTerm config.lua"
 fi
 
 # --- Zed Configuration ---
@@ -276,8 +276,8 @@ mkdir -p "$ZED_CONFIG_DIR"
 if [ $? -ne 0 ]; then
     echo -e "${RED}  ERROR:${RESET} Failed to create '$ZED_CONFIG_DIR'. Skipping Zed setup."
 else
-    link_file "$SCRIPT_DIR/zed/settings.json" "$ZED_CONFIG_DIR/settings.json" "Zed settings.json"
-    link_file "$SCRIPT_DIR/zed/keymap.json" "$ZED_CONFIG_DIR/keymap.json" "Zed keymap.json"
+    link_file "$SCRIPT_DIR/config/zed/settings.json" "$ZED_CONFIG_DIR/settings.json" "Zed settings.json"
+    link_file "$SCRIPT_DIR/config/zed/keymap.json" "$ZED_CONFIG_DIR/keymap.json" "Zed keymap.json"
 fi
 
 # --- Yazi Configuration ---
@@ -289,8 +289,8 @@ if [ $? -ne 0 ]; then
 else
     # Link all yazi config files if they exist
     for config_file in yazi.toml keymap.toml theme.toml; do
-        if [ -f "$SCRIPT_DIR/yazi/$config_file" ]; then
-            link_file "$SCRIPT_DIR/yazi/$config_file" "$YAZI_CONFIG_DIR/$config_file" "Yazi $config_file"
+        if [ -f "$SCRIPT_DIR/config/yazi/$config_file" ]; then
+            link_file "$SCRIPT_DIR/config/yazi/$config_file" "$YAZI_CONFIG_DIR/$config_file" "Yazi $config_file"
         fi
     done
 fi
@@ -302,7 +302,7 @@ mkdir -p "$FASTFETCH_CONFIG_DIR"
 if [ $? -ne 0 ]; then
     echo -e "${RED}  ERROR:${RESET} Failed to create '$FASTFETCH_CONFIG_DIR'. Skipping Fastfetch setup."
 else
-    link_file "$SCRIPT_DIR/fastfetch/config.jsonc" "$FASTFETCH_CONFIG_DIR/config.jsonc" "Fastfetch config.jsonc"
+    link_file "$SCRIPT_DIR/config/fastfetch/config.jsonc" "$FASTFETCH_CONFIG_DIR/config.jsonc" "Fastfetch config.jsonc"
 fi
 
 
@@ -313,7 +313,7 @@ mkdir -p "$EZA_CONFIG_DIR"
 if [ $? -ne 0 ]; then
     echo -e "${RED}  ERROR:${RESET} Failed to create '$EZA_CONFIG_DIR'. Skipping eza setup."
 else
-    link_file "$SCRIPT_DIR/eza/theme.yml" "$EZA_CONFIG_DIR/theme.yml" "eza theme.yml"
+    link_file "$SCRIPT_DIR/config/eza/theme.yml" "$EZA_CONFIG_DIR/theme.yml" "eza theme.yml"
 fi
 
 
