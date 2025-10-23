@@ -12,11 +12,11 @@ llr() {
 }
 
 tree() {
-  eza --icons -aTI "$IGNORE" "$@"
+  eza --icons --group-directories-first -aTI "$IGNORE" "$@"
 }
 
 jsontree() {
-  eza --icons -aTI "$IGNORE" -J "$@" | jq '.'
+  \tree --group-directories-first -aTI "$IGNORE" -J "$@" | jq '.'
 }
 
 alias tf='tofu'
