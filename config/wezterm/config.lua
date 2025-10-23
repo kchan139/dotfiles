@@ -38,7 +38,7 @@ config.text_background_opacity = 1.0
 config.background = {
   {
     source = {
-      File = os.getenv("HOME") .. "/dotfiles/img/mountain.jpg",
+      File = os.getenv("HOME") .. "/dotfiles/image/turtle.jpeg",
     },
     hsb = {
       hue = 1.0,
