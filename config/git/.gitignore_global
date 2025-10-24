@@ -6,5 +6,8 @@
 .env
 .DS_Store
 
+*secret/
+*secrets/
+
 khoa/
 *.khoa
