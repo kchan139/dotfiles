@@ -102,3 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Load extra user config if it exists
+if [[ -f ~/.zshrc.local ]]; then
+  source ~/.zshrc.local
+fi
+
