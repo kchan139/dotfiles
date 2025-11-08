@@ -8,6 +8,8 @@
 
 *secret/
 *secrets/
+*.secret
+*.secrets
 
 khoa/
 *.khoa
