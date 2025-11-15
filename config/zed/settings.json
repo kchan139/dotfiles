@@ -42,7 +42,7 @@
       ]
     }
   ],
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "Symbols Icon Theme",
   "autosave": "on_focus_change",
   "helix_mode": true,
   "ui_font_family": "Zed Plex Sans",
@@ -62,7 +62,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Base16 Horizon Terminal Dark"
+    "dark": "Base16 Black Metal (Immortal)"
   },
 
   "terminal": {
