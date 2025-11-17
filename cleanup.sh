@@ -1,94 +1,77 @@
 #!/bin/bash
+set -e
 
-# cleanup.sh
-# This script removes symbolic links created by setup.sh
-
-# Colors
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
-BOLD='\033[1m'
+YELLOW='\033[1;33m'
 RESET='\033[0m'
 
 echo -e "${CYAN}Starting dotfiles cleanup...${RESET}"
-echo -e "${YELLOW}This will remove symlinks created by setup.sh${RESET}\n"
 
-# Function to remove a symbolic link
-unlink_file() {
-    local target_file="$1"
-    local display_name="$2"
+# ===========================================================================
+# FUNCTIONS
+# ===========================================================================
 
-    echo -e "${CYAN}Processing ${display_name}...${RESET}"
+unlink_if_symlink() {
+    local target="$1"
+    echo -e "${CYAN}Checking: $target${RESET}"
 
-    if [ ! -e "$target_file" ]; then
-        echo -e "${YELLOW}  INFO:${RESET} '$target_file' does not exist. Skipping."
-        return 0
-    fi
-
-    if [ -L "$target_file" ]; then
-        read -p "    Remove symlink '$target_file'? (y/N): " response
-        if [[ "$response" =~ ^[yY]$ ]]; then
-            rm "$target_file"
-            if [ $? -eq 0 ]; then
-                echo -e "${GREEN}  SUCCESS:${RESET} Removed '$target_file'."
-            else
-                echo -e "${RED}  ERROR:${RESET} Failed to remove '$target_file'."
-                return 1
-            fi
-        else
-            echo -e "${YELLOW}    Skipped '$target_file'.${RESET}"
-        fi
+    if [ -L "$target" ]; then
+        rm -f "$target"
+        echo -e "${GREEN}  Removed symlink${RESET}"
     else
-        echo -e "${YELLOW}  WARNING:${RESET} '$target_file' is not a symlink. Skipping."
+        echo -e "${YELLOW}  Not a symlink, skipped${RESET}"
     fi
 }
 
-# --- Zsh Configuration ---
-echo -e "\n${BOLD}--- Removing Zsh configuration ---${RESET}"
-unlink_file "$HOME/.zshrc" ".zshrc"
+unlink_dir_symlink() {
+    local target="$1"
+    echo -e "${CYAN}Checking dir: $target${RESET}"
 
-# --- Git Configuration ---
-echo -e "\n${BOLD}--- Removing Git configuration ---${RESET}"
-unlink_file "$HOME/.gitconfig" ".gitconfig"
+    if [ -L "$target" ]; then
+        rm -f "$target"
+        echo -e "${GREEN}  Removed symlinked directory${RESET}"
+    else
+        echo -e "${YELLOW}  Not a symlinked directory, skipped${RESET}"
+    fi
+}
 
-# --- Tmux Configuration ---
-echo -e "\n${BOLD}--- Removing Tmux configuration ---${RESET}"
-unlink_file "$HOME/.tmux.conf" ".tmux.conf"
+# ===========================================================================
+# CONFIG MAPPING
+# ===========================================================================
 
-# --- Starship Configuration ---
-echo -e "\n${BOLD}--- Removing Starship configuration ---${RESET}"
-unlink_file "$HOME/.config/starship.toml" "starship.toml"
+home_files=(
+    "$HOME/.zshrc"
+    "$HOME/.gitconfig"
+    "$HOME/.gitignore_global"
+    "$HOME/.tmux.conf"
+)
 
-# --- Helix Configuration ---
-echo -e "\n${BOLD}--- Removing Helix configuration ---${RESET}"
-unlink_file "$HOME/.config/helix/config.toml" "Helix config.toml"
-unlink_file "$HOME/.config/helix/languages.toml" "Helix languages.toml"
+config_dirs=(
+    "$HOME/.config/fastfetch"
+    "$HOME/.config/eza"
+    "$HOME/.config/wezterm"
+    "$HOME/.config/zed"
+    "$HOME/.config/yazi"
+    "$HOME/.config/k9s"
+    "$HOME/.config/helix"
+    "$HOME/.config/starship"
+)
 
-# --- WezTerm Configuration ---
-echo -e "\n${BOLD}--- Removing WezTerm configuration ---${RESET}"
-unlink_file "$HOME/.config/wezterm/wezterm.lua" "WezTerm wezterm.lua"
-unlink_file "$HOME/.config/wezterm/events.lua" "WezTerm events.lua"
-unlink_file "$HOME/.config/wezterm/config.lua" "WezTerm config.lua"
+# ===========================================================================
+# CLEANING
+# ===========================================================================
 
-# --- Zed Configuration ---
-echo -e "\n${BOLD}--- Removing Zed configuration ---${RESET}"
-unlink_file "$HOME/.config/zed/settings.json" "Zed settings.json"
-unlink_file "$HOME/.config/zed/keymap.json" "Zed keymap.json"
-
-# --- Yazi Configuration ---
-echo -e "\n${BOLD}--- Removing Yazi configuration ---${RESET}"
-for config_file in yazi.toml keymap.toml theme.toml; do
-    unlink_file "$HOME/.config/yazi/$config_file" "Yazi $config_file"
+echo -e "\n${CYAN}Removing home-level dotfile symlinks...${RESET}"
+for f in "${home_files[@]}"; do
+    unlink_if_symlink "$f"
 done
 
-# --- Fastfetch Configuration ---
-echo -e "\n${BOLD}--- Removing Fastfetch configuration ---${RESET}"
-unlink_file "$HOME/.config/fastfetch/config.jsonc" "Fastfetch config.jsonc"
+echo -e "\n${CYAN}Removing ~/.config directory symlinks...${RESET}"
+for d in "${config_dirs[@]}"; do
+    unlink_dir_symlink "$d"
+done
 
-# --- Eza Configuration ---
-echo -e "\n${BOLD}--- Removing Eza configuration ---${RESET}"
-unlink_file "$HOME/.config/eza/theme.yml" "eza theme.yml"
-
-echo -e "\n${GREEN}Cleanup complete!${RESET}"
-echo -e "${YELLOW}Note: This script only removes symlinks. Backup files and installed packages remain.${RESET}"
+echo -e "\n${GREEN}Cleanup complete.${RESET}"
+echo -e "${YELLOW}Note: backups and real config directories remain untouched.${RESET}"
