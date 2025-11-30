@@ -20,24 +20,15 @@
   },
   "ssh_connections": [
     {
-      "host": "capstone",
-      "username": "khoa",
-      "port": 13904,
-      "args": [],
-      "projects": [
-        {
-          "paths": ["/home/khoa/capstone-project"]
-        }
-      ]
-    },
-    {
       "host": "homelab",
       "username": "khoa",
       "port": 1309,
       "args": [],
       "projects": [
         {
-          "paths": ["/home/khoa/Projects/helm-flask"]
+          "paths": [
+            "/home/khoa/Projects/helm-flask"
+          ]
         }
       ]
     }

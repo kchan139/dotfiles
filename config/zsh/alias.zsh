@@ -1,4 +1,4 @@
-IGNORE='node_modules|.git|dist|build|target|.next|venv|__pycache__|*.log|.DS_Store'
+IGNORE='node_modules|.git|dist|build|target|.next|venv|.venv*|__pycache__|*.log|.DS_Store|.terraform|vendor|*.png|*.jpeg|*.jpg|*.svg|*.ttf'
 
 alias ls='eza --group-directories-first --group --icons --git'
 alias l='eza -1s type --group-directories-first --group --icons --git'
@@ -22,6 +22,7 @@ jsontree() {
 alias tf='tofu'
 alias yz='yazi'
 alias k='kubectl'
+alias py='python3'
 alias ff='fastfetch'
 alias cpf='copyfile'
 alias docker='podman'
