@@ -4,6 +4,7 @@
 
 [alias]
 	ac = "!git add . ; git commit -m"
+	pray = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
 	co = checkout
 	ci = commit
 	st = status
